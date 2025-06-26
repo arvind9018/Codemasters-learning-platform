@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodeMasters - Learn to Code</title>
+  <link rel="stylesheet" href="CSS/online.css">
+</head>
+<body>
+<header>
+<div class="logo">CodeMasters</div>
+   
+    <nav class="main-nav">
+  <a href="index.html">Home</a>
+  <a href="#courses">Courses</a>
+  <a href="HTML/contact.html">Contact</a>
+  <a href="HTML/admin.html">Admin</a>
+  <a href="HTML/dashboard.html">Dashboard</a>
+  <a href="HTML/login.html">Login</a>
+</nav>
+
+  </header>
+
+  <section class="hero">
+    <h1>Master Coding with CodeMasters</h1>
+    <p>Learn web development, data science, and more from the best instructors.</p>
+    <button onclick="scrollToCourses()">Browse Courses</button>
+  </section>
+
+
+
+
+
+<section class="courses" id="courses">
+  <h2>All Courses for B.Tech CSE</h2>
+  <div class="filter-bar">
+    <input type="text" id="searchInput" placeholder="Search courses..." onkeyup="filterCourses()" />
+    
+    <select id="categoryFilter" onchange="filterCourses()">
+      <option value="all">All Categories</option>
+      <option value="programming">Programming</option>
+      <option value="web">Web Development</option>
+      <option value="dsa">DSA</option>
+      <option value="dbms">Database</option>
+      <option value="os">OS & CN</option>
+      <option value="ai">AI & Data Science</option>
+      <option value="cyber">Cybersecurity</option>
+      <option value="devops">Cloud & DevOps</option>
+      <option value="misc">Misc</option>
+    </select>
+  </div>
+<div class="course-list">
+  <div class="course-card" data-category="programming" onclick="showCourse('C Programming')">C Programming</div>
+  <div class="course-card" data-category="programming" onclick="showCourse('Java')">Java</div>
+  <div class="course-card" data-category="web" onclick="showCourse('HTML & CSS')">HTML & CSS</div>
+  <div class="course-card" data-category="ai" onclick="showCourse('Machine Learning')">Machine Learning</div>
+  <!-- Add other course cards similarly with data-category -->
+</div>
+  <div class="course-list">
+    <!-- Programming -->
+    <div class="course-card" onclick="showCourse('C Programming')">C Programming</div>
+    <div class="course-card" onclick="showCourse('C++ Programming')">C++ Programming</div>
+    <div class="course-card" onclick="showCourse('Java Programming')">Java Programming</div>
+    <div class="course-card" onclick="showCourse('Python Programming')">Python Programming</div>
+    <div class="course-card" onclick="showCourse('JavaScript Programming')">JavaScript Programming</div>
+
+    <!-- Web Dev -->
+    <div class="course-card" onclick="showCourse('HTML & CSS')">HTML & CSS</div>
+    <div class="course-card" onclick="showCourse('React.js')">React.js</div>
+    <div class="course-card" onclick="showCourse('Node.js')">Node.js</div>
+    <div class="course-card" onclick="showCourse('Full-Stack Web Development')">Full-Stack Web Development</div>
+
+    <!-- DSA -->
+    <div class="course-card" onclick="showCourse('DSA with C++')">DSA with C++</div>
+    <div class="course-card" onclick="showCourse('Competitive Programming')">Competitive Programming</div>
+
+    <!-- DBMS -->
+    <div class="course-card" onclick="showCourse('DBMS Fundamentals')">DBMS Fundamentals</div>
+    <div class="course-card" onclick="showCourse('SQL & MySQL')">SQL & MySQL</div>
+    <div class="course-card" onclick="showCourse('MongoDB')">MongoDB</div>
+
+    <!-- OS & CN -->
+    <div class="course-card" onclick="showCourse('Operating Systems')">Operating Systems</div>
+    <div class="course-card" onclick="showCourse('Computer Networks')">Computer Networks</div>
+
+    <!-- AI & DS -->
+    <div class="course-card" onclick="showCourse('Introduction to AI')">Introduction to AI</div>
+    <div class="course-card" onclick="showCourse('Machine Learning')">Machine Learning</div>
+    <div class="course-card" onclick="showCourse('Data Science')">Data Science</div>
+    <div class="course-card" onclick="showCourse('Deep Learning')">Deep Learning</div>
+
+    <!-- Cyber -->
+    <div class="course-card" onclick="showCourse('Cyber Security')">Cyber Security</div>
+    <div class="course-card" onclick="showCourse('Ethical Hacking')">Ethical Hacking</div>
+
+    <!-- Cloud & DevOps -->
+    <div class="course-card" onclick="showCourse('AWS Cloud Basics')">AWS Cloud Basics</div>
+    <div class="course-card" onclick="showCourse('Docker & Kubernetes')">Docker & Kubernetes</div>
+
+    <!-- Misc -->
+    <div class="course-card" onclick="showCourse('Software Engineering')">Software Engineering</div>
+    <div class="course-card" onclick="showCourse('Git & GitHub')">Git & GitHub</div>
+    <div class="course-card" onclick="showCourse('System Design')">System Design</div>
+    <div class="course-card" onclick="showCourse('Blockchain')">Blockchain</div>
+  </div>
+</section>
+
+
+  <div id="courseModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="courseTitle"></h2>
+      <p>Course details coming soon...</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 CodeMasters. All rights reserved.</p>
+  </footer>
+
+  <script src="online.js"></script>
+</body>
+</html>
