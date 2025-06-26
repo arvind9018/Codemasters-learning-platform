@@ -1,0 +1,28 @@
+[
+  {
+    "title": "C Programming",
+    "category": "programming",
+    "duration": "4 weeks",
+    "description": "Learn the fundamentals of C programming including loops, functions, arrays, and pointers.",
+    "syllabus": [
+      "Introduction to C",
+      "Control Structures",
+      "Functions & Recursion",
+      "Arrays & Pointers",
+      "File Handling in C"
+    ]
+  },
+  {
+    "title": "Machine Learning",
+    "category": "ai",
+    "duration": "6 weeks",
+    "description": "Understand the basics of ML, including supervised/unsupervised learning and model training.",
+    "syllabus": [
+      "Introduction to ML",
+      "Linear Regression",
+      "Classification Algorithms",
+      "Model Evaluation",
+      "Project & Deployment"
+    ]
+  }
+]
