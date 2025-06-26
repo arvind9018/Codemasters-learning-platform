@@ -111,11 +111,11 @@ header .logo {
 }
 
 /* Optional: Mobile Responsive Fix */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .course-card {
     width: 90%;
   }
-}
+} */
 
 
 footer {
