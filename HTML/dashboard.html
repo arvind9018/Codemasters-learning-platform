@@ -161,6 +161,23 @@ header nav a:hover {
   }
 }
 
+    .logout-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  margin-left: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: darkred;
+}
+
+
 
   </style>
 </head>
@@ -209,6 +226,13 @@ header nav a:hover {
     function randomProgress() {
       return Math.floor(Math.random() * 100) + 1;
     }
+     function logout() {
+    localStorage.removeItem("codemaster_user"); // clear user
+    // Optionally also clear enrolled courses
+    // localStorage.removeItem("enrolledCourses");
+    alert("You have been logged out.");
+    window.location.href = "login.html"; // Redirect to login
+     }
   </script>
 </body>
 
