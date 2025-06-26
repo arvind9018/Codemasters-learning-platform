@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - CodeMasters</title>
+  <style>
+    /* ===== Admin Page Styling ===== */
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.admin-page {
+  background-color: #0a0a23;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  padding-top: 70px; /* space for header */
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a23;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  border-bottom: 1px solid #333;
+
+
+ 
+}
+
+.admin-header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:white;
+}
+
+.admin-header nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  
+}
+
+.admin-header nav a:hover {
+  color: #ff9900;
+}
+
+.admin-container {
+  max-width: 500px;
+  margin: 3rem auto;
+  background-color: #1e1e2f;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.admin-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.admin-container input,
+.admin-container textarea,
+.admin-container button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+
+.admin-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.admin-container button {
+  background-color: #ff9900;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-container button:hover {
+  background-color: #e68a00;
+}
+
+.admin-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 1rem;
+}
+
+  </style>
+</head>
+<body class="admin-page">
+  <header class="admin-header">
+    <div class="logo">CodeMasters</div>
+    <nav>
+      <a href="online.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <div class="admin-container">
+    <h2>Add New Course (Simulated)</h2>
+    <form onsubmit="submitCourse(event)">
+      <input type="text" id="courseName" placeholder="Course Title" required />
+      <input type="text" id="courseCategory" placeholder="Category (e.g., ai, web)" required />
+      <input type="text" id="courseDuration" placeholder="Duration (e.g., 4 weeks)" required />
+      <textarea id="courseDesc" placeholder="Course Description" required></textarea>
+      <button type="submit">Add Course</button>
+    </form>
+    <p class="admin-note">Note: This form only logs data to the browser console. Backend required for real storage.</p>
+  </div>
+
+  <script>
+    function submitCourse(e) {
+      e.preventDefault();
+      const course = {
+        title: document.getElementById('courseName').value,
+        category: document.getElementById('courseCategory').value,
+        duration: document.getElementById('courseDuration').value,
+        description: document.getElementById('courseDesc').value
+      };
+      console.log("New course submitted:", course);
+      alert("Course submitted to console! Backend integration required to store data.");
+      e.target.reset();
+    }
+  </script>
+</body>
+
+</html>

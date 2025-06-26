@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us - CodeMasters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+    /* ===== Contact Page Styling ===== */
+
+
+/* ===== Header Styling ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a23;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color:white;
+}
+
+.main-nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: #ff9900;
+}
+
+.Contact{
+  height: 100vh;
+  background-color:rgb(33, 27, 27);
+  color: white;
+
+}
+
+.courses h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color:white;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  transition: border 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border: 1px solid #ff9900;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e68a00;
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    font-size: 0.95rem;
+  }
+}
+
+
+  </style>
+</head>
+<body class="Contact">
+  <header class="main-header">
+    <div class="logo">CodeMasters</div>
+    <nav class="main-nav">
+      <a href="online.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="courses">
+    <h2>Contact Us</h2>
+   <form class="contact-form" action="https://formspree.io/f/xjkrpgjq" method="POST">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="_replyto" placeholder="Your Email" required />
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Feedback</button>
+</form>
+<div style="max-width:600px; margin: 2rem auto;">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27323.78866499006!2d76.09418339406311!3d31.12436009942016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391abdc68d6a2bff%3A0x626be8c84ee64252!2sNawanshahr%2C%20Punjab!5e0!3m2!1sen!2sin!4v1750909742416!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+  </section>
+
+  <script>
+    function sendFeedback(event) {
+      event.preventDefault();
+      alert("Thank you for your feedback!");
+      document.querySelector('.contact-form').reset();
+    }
+  </script>
+</body>
+</html>

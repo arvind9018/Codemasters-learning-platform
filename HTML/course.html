@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Details - CodeMasters</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">CodeMasters</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <section class="courses">
+    <h2 id="courseTitle">Loading...</h2>
+    <p id="courseDesc"></p>
+    <p><strong>Duration:</strong> <span id="courseDuration"></span></p>
+    <h3>Syllabus:</h3>
+    <ul id="courseSyllabus"></ul>
+  </section>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const courseQuery = urlParams.get('course');
+
+    fetch('courses.json')
+      .then(response => response.json())
+      .then(data => {
+        const course = data.find(c => c.title.toLowerCase() === courseQuery.toLowerCase());
+        if (course) {
+          document.getElementById('courseTitle').textContent = course.title;
+          document.getElementById('courseDesc').textContent = course.description;
+          document.getElementById('courseDuration').textContent = course.duration;
+          
+          const syllabusList = document.getElementById('courseSyllabus');
+          course.syllabus.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            syllabusList.appendChild(li);
+          });
+        } else {
+          document.getElementById('courseTitle').textContent = "Course Not Found";
+        }
+      });
+  </script>
+</body>
+</html>
