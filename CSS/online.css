@@ -62,26 +62,61 @@ header .logo {
   background: #fff;
 }
 
+
 .course-list {
   display: flex;
-  gap: 1rem;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .course-card {
-  background-color: #e0e0e0;
-  padding: 1rem;
-  width: 280px;
+  background-color: #1e1e2f;
   border-radius: 10px;
-  cursor: pointer;
+  padding: 1rem;
+  color: white;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s;
 }
 
 .course-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
+
+.course-card h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.course-card button {
+  margin-top: 1rem;
+  background-color: #ff9900;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.course-card button:hover {
+  background-color: #e68a00;
+}
+
+/* Optional: Mobile Responsive Fix */
+@media (max-width: 768px) {
+  .course-card {
+    width: 90%;
+  }
+}
+
 
 footer {
   background-color: #0a0a23;
